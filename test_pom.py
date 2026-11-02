@@ -14,7 +14,6 @@ def test_ejecucion_pom():
         inventario.agregar_mochila()
         assert inventario.cantidad_carrito() == "1"
         print("✅ POM funcionando")
-        input("Haz la captura del carrito y presiona Enter para cerrar...")
 
     finally:
         driver.quit()

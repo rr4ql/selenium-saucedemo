@@ -13,7 +13,7 @@ def test_agregar_carrito(driver):
     login.login("standard_user", "secret_sauce")
     inventario = InventoryPage(driver)
     inventario.agregar_mochila()
-    assert inventario.cantidad_carrito() == "2"
+    assert inventario.cantidad_carrito() == "1"
 
 def test_login_bloqueado(driver):
     login = LoginPage(driver)

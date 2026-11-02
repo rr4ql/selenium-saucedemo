@@ -26,7 +26,6 @@ try:
     badge = wait.until(EC.visibility_of_element_located((By.CLASS_NAME, "shopping_cart_badge"))).text
     assert badge == "1"
     print("✅ Caso 2: producto agregado")
-    input("Haz la captura del carrito y presiona Enter...")
 
     # Caso 3
     driver.delete_all_cookies()
@@ -37,7 +36,6 @@ try:
     error = wait.until(EC.visibility_of_element_located((By.CSS_SELECTOR, "[data-test='error']"))).text
     assert "locked out" in error
     print("✅ Caso 3: login bloqueado detectado")
-    input("Haz la captura del mensaje de error y presiona Enter para cerrar...")
 
 finally:
     driver.quit()

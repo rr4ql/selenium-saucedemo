@@ -25,7 +25,6 @@ def ejecutar_pruebas():
         badge = driver.find_element(By.CLASS_NAME, "shopping_cart_badge").text
         assert badge == "1"
         print("✅ Caso 2 completado con éxito.")
-        input("Haz la captura y presiona Enter para continuar...")
 
         print("Ejecutando Caso 3: Login fallido...")
         driver.delete_all_cookies()
